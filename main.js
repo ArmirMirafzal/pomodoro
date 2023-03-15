@@ -40,12 +40,7 @@ function handleStart() {
 function handleActionBtnClick(actionBtn) {
 	const currentTime = +actionBtn.getAttribute("time");
 	const isActive = actionBtn.classList.contains("active");
-	
-	// if(isActive){
-	// 	if(actionBtns[1].classList.contains(" shortBreak")){
-	// 		document.querySelector("body").style.background = "rgb(56, 133, 138)";
-	// 	}
-	// }
+
 
 	if (!isActive) {
 		const isYes = startBtn.classList.contains("active") ? confirm(`${actionBtn.innerText} 🧐 ? `) : true;
@@ -63,13 +58,21 @@ function handleActionBtnClick(actionBtn) {
 			actionBtn.classList.add("active");
 		}
 	}
+
+		
+	if(isActive){
+		if(actionBtns[1].classList.contains("shortBreak")){
+			document.querySelector("body").style.background = "rgb(56, 133, 138)";
+		}
+	}
+
 }
 
 function init() {
 	startBtn.addEventListener("click", handleStart);
 
 	actionBtns.forEach((btn) => {
-		btn.addEventListener("click", (e) => handleActionBtnClick(btn));
+		btn.addEventListener("click", () => handleActionBtnClick(btn));
 	});
 }
 
