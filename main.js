@@ -69,7 +69,7 @@ function init() {
 	startBtn.addEventListener("click", handleStart);
 
 	actionBtns.forEach((btn) => {
-		btn.addEventListener("click", () => handleActionBtnClick(btn));
+		btn.addEventListener("click", (e) => handleActionBtnClick(btn));
 	});
 }
 
