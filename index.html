@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Pomodoro</title>
-</head>
-<body>
-    
-
-    <h1>pomodoro</h1>
-
-
-
-
-    <script src="./main.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pomofocus</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<div class="main-menu">
+					<span class="main-menu-item pomodoro active" time="1500">Pomodoro</span>
+					<span class="main-menu-item shortBreak" time="300">Short Break</span>
+					<span class="main-menu-item longBreak" time="900">Long Break</span>
+				</div>
+				<div class="main-time">25:00</div>
+				<div class="main-buttons">
+					<button class="main-buttons-startBtn" id="startBtn">START</button>
+				</div>
+			</div>
+		</div>
+		<div class="countdown-container">
+			<div class="countdown-progress"></div>
+			<div class="countdown-timer"></div>
+		</div>
+		<script type="module" src="./main.js"></script>
+	</body>
 </html>

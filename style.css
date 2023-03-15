@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	user-select: none;
+}
+
+body {
+	/* width: 100%; */
+	height: 100vh;
+	background: rgb(186, 73, 73);
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.container {
+	min-width: 620px;
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main {
+	max-width: 480px;
+	width: 100%;
+	background: green;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 30px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 5px;
+	margin-top: 40px;
+}
+@media (max-width: 400px) {
+	.main {
+		padding: 20px;
+	}
+}
+.main-menu {
+	display: flex;
+	justify-content: center;
+}
+.main-menu-item {
+	padding: 2px 12px;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	color: #fff;
+	opacity: 1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	transition: all 0.03s;
+}
+@media (max-width: 400px) {
+	.main-menu-item {
+		font-size: 12px;
+	}
+}
+.main-menu-item:active {
+	transform: translateY(5px);
+}
+.main-menu-item.active {
+	background: none rgba(0, 0, 0, 0.15);
+}
+.main-time {
+	font-size: 120px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	margin-top: 20px;
+	font-family: "Arial Rounded MT W02 Bold", "Poppins", sans-serif;
+}
+@media (max-width: 400px) {
+	.main-time {
+		font-size: 90px;
+	}
+}
+.main-buttons {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.main-buttons-startBtn {
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+	font-family: "Arial Rounded MT W02 Bold", "Poppins", sans-serif;
+	font-size: 22px;
+	width: 200px;
+	height: 55px;
+	color: #c15c5c;
+	font-weight: bold;
+	text-align: center;
+	background-color: white;
+	outline: none;
+	margin: auto;
+}
+@media (max-width: 400px) {
+	.main-buttons-startBtn {
+		font-size: 22px;
+		width: 180px;
+		height: 45px;
+	}
+}
+.main-buttons-startBtn.active {
+	box-shadow: rgb(235, 235, 235) 0px 0px 0px;
+	transform: translateY(6px);
+}
+.main-buttons-nextBtn {
+	width: 22px;
+	cursor: pointer;
+	height: 22px;
+	position: relative;
+	left: -50px;
+	transition: all 0.3s;
+	display: none;
+}
+.main-buttons-nextBtn:hover {
+	opacity: 0.5;
+}
