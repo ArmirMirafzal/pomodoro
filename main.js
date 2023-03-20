@@ -57,12 +57,7 @@ function handleStart() {
 function handleActionBtnClick(actionBtn) {
 	const currentTime = +actionBtn.getAttribute("time");
 	const isActive = actionBtn.classList.contains("active");
-// <<<<<<< HEAD
 
-
-// =======
-    
-// >>>>>>> origin/sa1dof
 	if (!isActive) {
 		const isYes = startBtn.classList.contains("active") ? confirm(`${actionBtn.innerText} 🧐 ? `) : true;
 
@@ -79,14 +74,6 @@ function handleActionBtnClick(actionBtn) {
 			actionBtn.classList.add("active");
 		}
 	}
-
-		
-	// if(isActive){
-	// 	if(actionBtns[1].classList.contains("shortBreak")){
-	// 		document.querySelector("body").style.background = "rgb(56, 133, 138)";
-	// 	}
-	// }
-
 }
 
 function init() {
